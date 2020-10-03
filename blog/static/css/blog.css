@@ -1,0 +1,33 @@
+.page-header {
+    background-color: #9932cc;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    margin-bottom: 10px;
+}
+
+.page-header a {
+    color: #ffffff;
+    font-size: 30pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif;
+    font-size: 48px;
+}
+
+.date {
+    color: #828282;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post a {
+    color: #000000;
+}
