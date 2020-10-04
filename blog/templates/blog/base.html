@@ -11,7 +11,8 @@
 <body>
     <div class="page-header">
         {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}"  class="top-menu"><i class="fas fa-plus"></i></a>
+            <a href="{% url 'post_draft_list' %}"  class="top-menu"><span title="Draft"><i class="far fa-clipboard"></i></span></a>
+            <a href="{% url 'post_new' %}"  class="top-menu"><span title="New Post"><i class="fas fa-plus"></i></span></a>
         {% endif %}
         <h1><a href="{% url "index" %}">PYTHON BLOG</a></h1>
     </div>

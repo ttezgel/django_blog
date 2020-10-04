@@ -3,13 +3,15 @@
 {% block content %}
     <div class="post">
         {% if user.is_authenticated %}
-            <a href="{% url 'post_edit' pk=post.pk %}"><i class="fas fa-edit fa-2x"></i></a>
+            <a href="{% url 'post_edit' pk=post.pk %}"><span title="Edit"><i class="fas fa-edit fa-2x" style="margin-right: 20px"></i></span></a>
         {% endif %}
 
         {% if post.published_date %}
             <div class="date">
                 Published: {{ post.published_date }}
             </div>
+            {% else %}
+            <a href="{% url 'post_publish' pk=post.pk %}"><span title="Publish"><i class="fas fa-share-square fa-2x"></i></span></a>
         {% endif %}
 
         <h1>{{ post.title }}</h1>
