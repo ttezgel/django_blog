@@ -11,8 +11,10 @@
 <body>
     <div class="page-header">
         {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}"  class="top-menu"><span title="Logout"><i class="fas fa-sign-out-alt"></i></span></a>
             <a href="{% url 'post_draft_list' %}"  class="top-menu"><span title="Draft"><i class="far fa-clipboard"></i></span></a>
             <a href="{% url 'post_new' %}"  class="top-menu"><span title="New Post"><i class="fas fa-plus"></i></span></a>
+            <p class="top-menu">Hello, {{ user.username }}</p>
         {% else %}
             <a href="{% url 'login' %}"  class="top-menu"><span title="Login"><i class="fas fa-sign-in-alt"></i></span></a>
         {% endif %}
