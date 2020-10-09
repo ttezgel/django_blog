@@ -26,6 +26,7 @@
             <div class="date">
                 {{ comment.created_date }}
             </div>
+            <a href="{% url 'comment_remove' pk=comment.pk %}"><span title="Delete"><i class="fas fa-trash-alt"></i></span></a>
             <strong>{{ comment.author }}</strong>
             <p>{{ comment.text }}</p>
         </div>
