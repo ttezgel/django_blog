@@ -106,7 +106,7 @@ def comment_approve(request, pk):
 
 
 def signup(request):
-    if request == 'POST':
+    if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
             new_user = User.objects.create_user(**form.cleaned_data)
