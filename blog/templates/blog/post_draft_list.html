@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load markdownify %}
 
 {% block title %}Drafts{% endblock %}
 
@@ -11,7 +12,7 @@
             </div>
 
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text | linebreaksbr | truncatechars:50 }}</p>
+            <p>{{ post.text |markdown | safe | linebreaksbr | truncatechars:50 }}</p>
         </div>
     {% endfor %}
 {% endblock %}
