@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load markdownify %}
+
+{% block title %}Drafts{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+
+            <div class="date">
+                Created: {{ post.created_date }}
+            </div>
+
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text |markdown | safe | linebreaksbr | truncatechars:50 }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
